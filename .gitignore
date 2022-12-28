@@ -1,0 +1,9 @@
+/target
+
+/data/*
+!/data/cifar
+!/data/mnist
+
+/data/**/*.bin
+/data/**/*.html
+/data/**/*.txt

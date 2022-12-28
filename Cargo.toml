@@ -1,0 +1,27 @@
+[package]
+name = "datasets"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ndarray = "*"
+tar = "*"
+async-trait = "*"
+reqwest = { version = "*", features = ["stream"] }
+url = "*"
+bytes = "*"
+flate2 = "*"
+png = "*"
+log = "*"
+md-5 = "0.10"
+hex = "0.4"
+futures-util = "*"
+
+[target.'cfg(target_arch = "x86_64")'.dependencies]
+md-5 = { version = "0.10", features = ["asm"] }
+
+[dev-dependencies]
+tokio = { version = "*", features = ["macros"] }
+env_logger = "*"
